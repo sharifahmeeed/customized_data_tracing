@@ -9,6 +9,7 @@ for j in range(32):
 
     reloadCheck = None
 
+
     while not reloadCheck:
         reloadCheck = pyautogui.locateOnScreen('reload_complete.PNG')
         if reloadCheck:
@@ -40,17 +41,19 @@ for j in range(32):
 
                     if ((mo.group()[0:3] == "May") | (mo.group()[0:3] == "Jun") | (mo.group()[0:3] == "Jul") | (
                             mo.group()[0:3] == "Aug")):
+
+                        for i in range(3):
+                            print(" Please Book Slot! Slot Open For " + mo.group()[0:3])
+                            pp.copy(" Please Book Slot! Slot Open For " + mo.group()[0:3])
+
                         for i in range(7):
                             beep(sound=2)  # integer as argument
                             beep(sound='coin')  # string as argument
                             beep(sound=2)  # integer as argument
                             beep(sound='coin')  # string as argument
 
-                        for i in range(3):
-                            print(" Please Book Slot! Slot Open For " + mo.group()[0:3])
-                            pp.copy(" Please Book Slot! Slot Open For " + mo.group()[0:3])
 
-                        pyautogui.click(1743, 228)  #call messenger group
+                        #pyautogui.click(1743, 228)  #call messenger group
 
 
                 else:
