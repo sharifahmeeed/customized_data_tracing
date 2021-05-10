@@ -5,6 +5,29 @@ from datetime import datetime
 from beepy import beep
 import time
 
+## for my samsumg pc
+cgi_blank_click1 = 133
+cgi_blank_click2 = 924
+cgi_blank_click3 = 350
+cgi_blank_click4 = 924
+msg_init_click1 = 1521
+msg_init_click2 = 1044
+
+con_1 = 100
+con_2 = 408
+hom_1 = 43
+hom_2 = 340
+fed_1 = 132
+fed_2 = 522
+sch_1 = 134
+sch_2 = 468
+upd_1 = 153
+upd_2 = 553
+log_1 = 83
+log_2 = 583
+
+# customization thread end
+
 
 def human_behavior(con1, con2, hom1, hom2, fed1, fed2, sch1, sch2, upd1, upd2, log1, log2):
     if j in [1, 11, 21]:
@@ -45,28 +68,7 @@ def alarm_msg_call():
 
     # pyautogui.click(1743, 228)  #call messenger group
 
-## for my samsumg pc
-cgi_blank_click1 = 133
-cgi_blank_click2 = 924
-cgi_blank_click3 = 350
-cgi_blank_click4 = 924
-msg_init_click1 = 1521
-msg_init_click2 = 1044
 
-con_1 = 100
-con_2 = 408
-hom_1 = 43
-hom_2 = 340
-fed_1 = 132
-fed_2 = 522
-sch_1 = 134
-sch_2 = 468
-upd_1 = 153
-upd_2 = 553
-log_1 = 83
-log_2 = 583
-
-# customization thread end
 
 
 for j in range(32):
