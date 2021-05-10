@@ -5,7 +5,8 @@ from datetime import datetime
 from beepy import beep
 import time
 
-## for my samsumg pc
+## customization thread start# for my samsumg pc
+
 cgi_blank_click1 = 133
 cgi_blank_click2 = 924
 cgi_blank_click3 = 350
@@ -52,9 +53,6 @@ def human_behavior(con1, con2, hom1, hom2, fed1, fed2, sch1, sch2, upd1, upd2, l
         pyautogui.click(log1, log2)  # Logout: 83, 583
 
 
-# customization thread start
-
-
 def alarm_msg_call():
     for i in range(3):
         print(" Please Book Slot! Slot Open For " + mo.group()[0:3])
@@ -68,9 +66,7 @@ def alarm_msg_call():
 
     # pyautogui.click(1743, 228)  #call messenger group
 
-
-
-
+# code for half hour
 for j in range(32):
 
     reloadCheck = None
