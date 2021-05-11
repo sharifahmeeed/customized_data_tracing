@@ -115,7 +115,7 @@ for j in range(32):
                 beep(sound='coin')  # string as argument
                 beep(sound='coin')  # string as argument
 
-            if len(pp.paste() < 100):  # to skip full copy site copy paste problem
+            if len(pp.paste()) < 100:  # to skip full copy site copy paste problem
                 pyautogui.hotkey('ctrl', 'v')
                 pyautogui.hotkey('enter')
 
