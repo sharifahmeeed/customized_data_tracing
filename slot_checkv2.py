@@ -5,7 +5,7 @@ from datetime import datetime
 from beepy import beep
 import time
 
-## customization thread start# for my samsumg pc shaif fine
+## customization thread start#
 
 cgi_blank_click1 = 133
 cgi_blank_click2 = 924
