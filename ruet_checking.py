@@ -32,12 +32,14 @@ upd_1 = 153
 upd_2 = 553
 log_1 = 83
 log_2 = 583
+while 1:
+    now = datetime.now()
+    current_time = now.strftime("%H:%M")
 
-now = datetime.now()
-current_time = now.strftime("%H:%M")
+    pp.copy(" NNS " + current_time)
 
-pp.copy(" NNS " + current_time)
+    pyautogui.click(msg_init_click1, msg_init_click2)
+    pyautogui.hotkey('ctrl', 'v')
+    pyautogui.hotkey('enter')
 
-pyautogui.click(msg_init_click1, msg_init_click2)
-pyautogui.hotkey('ctrl', 'v')
-pyautogui.hotkey('enter')
+    time.sleep(5)

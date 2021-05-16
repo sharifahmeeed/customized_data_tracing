@@ -84,7 +84,7 @@ for j in range(32):
     reloadCheck = None
 
     while not reloadCheck:
-        reloadCheck = pyautogui.locateOnScreen('reload_complete.PNG')
+        reloadCheck = True # pyautogui.locateOnScreen('reload_complete.PNG')
         if reloadCheck:
             # pyautogui.moveTo(400, 800)
             pyautogui.click(cgi_blank_click1, cgi_blank_click2)  # (133, 924)
@@ -139,7 +139,7 @@ for j in range(32):
                 pyautogui.hotkey('ctrl', 'v')
                 pyautogui.hotkey('enter')
 
-    time.sleep(60) #53
+    time.sleep(53) #53
 
     # human_behavior(con1, con2, hom1, hom2, fed1, fed2, sch1, sch2, upd1, upd2, log1, log2)
     human_behavior(con_1, con_2, hom_1, hom_2, fed_1, fed_2, sch_1, sch_2, upd_1, upd_2, log_1, log_2)
