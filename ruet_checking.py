@@ -35,11 +35,13 @@ log_2 = 583
 while 1:
     now = datetime.now()
     current_time = now.strftime("%H:%M")
+    current_month = now.strftime("%b")
 
-    pp.copy(" NNS " + current_time)
+    pp.copy(" NNS " + current_time + current_month)
 
-    pyautogui.click(msg_init_click1, msg_init_click2)
-    pyautogui.hotkey('ctrl', 'v')
-    pyautogui.hotkey('enter')
+    print( NNS 21:14May)
+    # pyautogui.click(msg_init_click1, msg_init_click2)
+    # pyautogui.hotkey('ctrl', 'v')
+    # pyautogui.hotkey('enter')
 
     time.sleep(5)
