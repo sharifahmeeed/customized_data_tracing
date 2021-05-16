@@ -7,12 +7,18 @@ import time
 
 ## customization thread start#
 
+
+
 cgi_blank_click1 = 133
 cgi_blank_click2 = 924
 cgi_blank_click3 = 350
 cgi_blank_click4 = 924
+
+
 msg_init_click1 = 1521
 msg_init_click2 = 1044
+msg_call1 = 1749
+msg_call2 = 223
 
 con_1 = 100
 con_2 = 408
@@ -54,11 +60,17 @@ def human_behavior(con1, con2, hom1, hom2, fed1, fed2, sch1, sch2, upd1, upd2, l
 
 
 def alarm_msg_call():
-    for i in range(3):
-        print(" Please Book Slot! Slot Open For " + mo.group()[0:3])
-        pp.copy(" Please Book Slot! Slot Open For " + mo.group()[0:3])
+    for i in range(1):
+        print(" Please Book Slot! Slot Open For " + mo.group())
+        pp.copy(" Please Book Slot! Slot Open For " + mo.group())
 
-    for i in range(7):
+        pyautogui.click(msg_init_click1, msg_init_click2)  # # group msg first
+        pyautogui.hotkey('ctrl', 'v')  # group msg first
+        pyautogui.hotkey('enter')  # group msg first
+        pyautogui.click(msg_call1, msg_call2)
+
+
+    for i in range(1):
         beep(sound=2)  # integer as argument
         beep(sound='coin')  # string as argument
         beep(sound=2)  # integer as argument
@@ -116,16 +128,18 @@ for j in range(32):
                 beep(sound='coin')  # string as argument
 
             if len(pp.paste()) < 100:  # to skip full copy site copy paste problem
+                pyautogui.click(msg_init_click1, msg_init_click2)
                 pyautogui.hotkey('ctrl', 'v')
                 pyautogui.hotkey('enter')
 
             else:
                 pp.copy("Sorry! Data Error")
                 time.sleep(1)
+                pyautogui.click(msg_init_click1, msg_init_click2)
                 pyautogui.hotkey('ctrl', 'v')
                 pyautogui.hotkey('enter')
 
-    time.sleep(53)
+    time.sleep(60) #53
 
     # human_behavior(con1, con2, hom1, hom2, fed1, fed2, sch1, sch2, upd1, upd2, log1, log2)
     human_behavior(con_1, con_2, hom_1, hom_2, fed_1, fed_2, sch_1, sch_2, upd_1, upd_2, log_1, log_2)
